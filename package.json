@@ -1,6 +1,6 @@
 {
   "name": "agui-chain",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
   "description": "A lightweight chain-based API for generating AG-UI protocol events",
   "main": "dist/index.js",
