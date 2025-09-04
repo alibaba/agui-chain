@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@ag-ui/core':
-        specifier: ^0.0.35
-        version: 0.0.35
+        specifier: ^0.0.36
+        version: 0.0.36
     devDependencies:
       '@types/node':
         specifier: ^24.1.0
@@ -42,8 +42,8 @@ importers:
 
 packages:
 
-  '@ag-ui/core@0.0.35':
-    resolution: {integrity: sha512-YAqrln3S3fdo+Hs5FFQPODXiBttyilv/E3xSSHCuxqC0Y/Fp3+VqyDx97BorO3NVp2VKZ9cG2nsO3cbmcTwkQw==}
+  '@ag-ui/core@0.0.36':
+    resolution: {integrity: sha512-uYUrzw6uxuw4qVQ61mdSeiG0mFh2n/VAWmWsWzwETDuhqJZT7rFmd07IajcFWcyItMr1wjqxFDdlklucAyEYNA==}
 
   '@ampproject/remapping@2.3.0':
     resolution: {integrity: sha512-30iZtAPgz+LTIYoeivqYo853f02jBYSd5uGnGpkFV0M3xOt9aN73erkgYAmZU43x4VfqcnLxW9Kpg3R5LC4YYw==}
@@ -1262,7 +1262,7 @@ packages:
 
 snapshots:
 
-  '@ag-ui/core@0.0.35':
+  '@ag-ui/core@0.0.36':
     dependencies:
       rxjs: 7.8.1
       zod: 3.25.76
