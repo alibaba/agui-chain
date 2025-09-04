@@ -53,25 +53,24 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           
-      - name: Generate changelog
-        id: changelog
-        run: |
-          # Extract version from tag
-          VERSION=${GITHUB_REF#refs/tags/v}
-          echo "version=$VERSION" >> $GITHUB_OUTPUT
-          
-          # Generate changelog (you might want to use a tool like conventional-changelog)
-          echo "## Changes in v$VERSION" > CHANGELOG_TEMP.md
-          echo "" >> CHANGELOG_TEMP.md
-          echo "See the [full changelog](https://github.com/${{ github.repository }}/compare/v$(git describe --tags --abbrev=0 HEAD^)...v$VERSION) for details." >> CHANGELOG_TEMP.md
-          
       - name: Create GitHub Release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.ref }}
-          release_name: Release v${{ steps.changelog.outputs.version }}
-          body_path: CHANGELOG_TEMP.md
+          tag_name: ${{ github.ref_name }}
+          name: Release ${{ github.ref_name }}
+          body: |
+            ## 🚀 What's Changed in ${{ github.ref_name }}
+            
+            - 📦 Published to NPM: `npm install agui-chain@${{ github.ref_name }}`
+            - 🔗 [Full Changelog](https://github.com/${{ github.repository }}/compare/${{ github.event.before }}...${{ github.ref_name }})
+            
+            ### 📋 Installation
+            ```bash
+            npm install agui-chain@${{ github.ref_name }}
+            # or
+            pnpm add agui-chain@${{ github.ref_name }}
+            ```
           draft: false
           prerelease: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
