@@ -42,7 +42,14 @@ jobs:
         run: pnpm build
         
       - name: Publish to npm
-        run: pnpm publish --no-git-checks
+        run: |
+          # Check if version already exists on npm
+          if npm view agui-chain@$(node -p "require('./package.json').version") version 2>/dev/null; then
+            echo "Version already exists on npm, skipping publish"
+            exit 0
+          else
+            pnpm publish --no-git-checks
+          fi
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           
