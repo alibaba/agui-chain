@@ -9,9 +9,9 @@ updates:
       time: "09:00"
     open-pull-requests-limit: 10
     reviewers:
-      - "yourusername"
+      - "tageecc"
     assignees:
-      - "yourusername"
+      - "tageecc"
     commit-message:
       prefix: "chore"
       include: "scope"
@@ -25,9 +25,9 @@ updates:
       time: "09:00"
     open-pull-requests-limit: 5
     reviewers:
-      - "yourusername"
+      - "tageecc"
     assignees:
-      - "yourusername"
+      - "tageecc"
     commit-message:
       prefix: "ci"
       include: "scope"

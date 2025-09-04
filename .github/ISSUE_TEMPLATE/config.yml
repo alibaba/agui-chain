@@ -1,11 +1,11 @@
 blank_issues_enabled: false
 contact_links:
   - name: 📚 Documentation
-    url: https://github.com/yourusername/agui-chain#readme
+    url: https://github.com/alibaba/agui-chain#readme
     about: Check out the documentation for usage examples and API reference
   - name: 💬 Discussions
-    url: https://github.com/yourusername/agui-chain/discussions
+    url: https://github.com/alibaba/agui-chain/discussions
     about: Ask questions and discuss ideas with the community
   - name: 🔒 Security Issues
-    url: https://github.com/yourusername/agui-chain/security/advisories/new
+    url: https://github.com/alibaba/agui-chain/security/advisories/new
     about: Report security vulnerabilities privately
