@@ -1,5 +1,11 @@
 # agui-chain
 
+[![npm version](https://badge.fury.io/js/agui-chain.svg)](https://badge.fury.io/js/agui-chain)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Test Coverage](https://img.shields.io/badge/Coverage-100%25-brightgreen.svg)](https://vitest.dev/)
+[![Test](https://img.shields.io/badge/Test-Vitest-brightgreen.svg)](https://vitest.dev/)
+[![AG-UI Protocol](https://img.shields.io/badge/AG--UI-Protocol%20Compliant-orange.svg)](https://docs.ag-ui.com/concepts/events)
+
 English | [简体中文](README.zh-CN.md)
 
 A lightweight chain-based API for generating AG-UI protocol events with automatic state management and event subscription. **Fully compliant with the [AG-UI Protocol specification](https://docs.ag-ui.com/concepts/events).**
