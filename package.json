@@ -1,0 +1,65 @@
+{
+  "name": "agui-chain",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "A lightweight chain-based API for generating AG-UI protocol events",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "author": "tageecc <tageecc@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "ag-ui",
+    "protocol",
+    "chain",
+    "events",
+    "streaming",
+    "typescript"
+  ],
+  "dependencies": {
+    "@ag-ui/core": "^0.0.35"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "vitest run",
+    "test:watch": "vitest --watch",
+    "test:coverage": "vitest run --coverage",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write src/**/*.ts",
+    "format:check": "prettier --check src/**/*.ts",
+    "prepublishOnly": "pnpm build && pnpm test && pnpm lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alibaba/agui-chain.git"
+  },
+  "bugs": {
+    "url": "https://github.com/alibaba/agui-chain/issues"
+  },
+  "homepage": "https://github.com/alibaba/agui-chain#readme",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+  "devDependencies": {
+    "@types/node": "^24.1.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "@vitest/coverage-v8": "^3.2.4",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "prettier": "^3.0.0",
+    "typescript": "^5.0.0",
+    "vitest": "^3.2.4"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
